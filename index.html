@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Hapus watermark pada unduhan video tiktok anda dengan menggunakaan bantuan tool TikSave.">
+  <title>TikSave — Download TikTok Tanpa Watermark</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- <script>
+    (function(d,z,s){s.src='https://'+d+'/401/'+z;try{
+    (document.body||document.documentElement).appendChild(s)}catch(e){}})
+    ('vemtoutcheeg.net','ZONE_ID_KAMU',document.createElement('script'))
+  </script> -->
+  <link rel="icon" href="assets/icon.jpeg" type="image/x-icon" sizes="16x16">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <i class="fab fa-tiktok"></i>
+    TikSave
+  </div>
+  <span class="header-badge"><i class="fas fa-check"></i> Gratis</span>
+</header>
+
+<main>
+  <div class="hero-text">
+    <h1>Download TikTok<br>tanpa watermark</h1>
+    <p>Video unduhan Anda dari Tiktok memiliki sebuah watermark? Tenang! kami menyediakan sebuah tool dimana Anda akan menyalin link video dari Tiktok dan tempel pada input dibawah. <br> Tunggu proses, unduh, dan nikmati video Tiktok tanpa watermark.</p>
+    <br><p><strong>Fast</strong> | <strong>Safe</strong> | <strong>Work 100%</strong></p>
+  </div>
+
+  <div class="input-card">
+    <div class="input-row">
+      <i class="fas fa-link input-icon"></i>
+      <input type="text" id="urlInput"
+        placeholder="https://www.tiktok.com/@user/video/…"
+        autocomplete="off" spellcheck="false">
+      <button class="btn-go" id="btnGo">
+        <i class="fas fa-arrow-right"></i>
+        <span>Proses</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="status" id="statusEl"></div>
+
+  <div class="cors-warn" id="corsWarn">
+    <i class="fas fa-triangle-exclamation"></i>
+    <span>
+      <strong>API terblokir</strong> Solusi: Hubungi Developer untuk memperbaiki hal ini.
+      <a href="#" id="corsToggle">Lihat caranya →</a>
+    </span>
+  </div>
+
+  <div class="result" id="resultEl">
+    <div class="video-wrap">
+      <video id="videoEl" controls playsinline preload="metadata"></video>
+    </div>
+
+    <div class="meta" id="metaEl">
+      <span><i class="fas fa-heading"></i> <span id="metaTitle">-</span></span>
+      <span><i class="far fa-clock"></i> <span id="metaDur">-</span></span>
+      <span><i class="fas fa-circle-check" style="color:#16a34a"></i> No watermark</span>
+    </div>
+
+    <div class="q-notice" id="qNotice">
+      <i class="fas fa-circle-info"></i>
+      <span id="qNoticeText"></span>
+    </div>
+
+    <div class="dl-section">
+    <div class="dl-label">Unduh Video</div>
+
+      <button class="btn-dl btn-sd" id="btnDownload" style="background: #2563eb; color: white; border: none;">
+        <div class="btn-dl-left">
+          <i class="fas fa-download"></i>
+          <span>Download Video</span>
+          <span class="q-pill" style="background: #ffffff20; color: white;">No Watermark</span>
+        </div>
+        <span class="btn-dl-right">Gratis</span>
+      </button>
+    </div>
+
+  <div class="proxy-box" id="proxyBox">
+    <h4><i class="fas fa-server"></i> Developer Contact:</h4>
+    <pre>082245078383 (Contact Me via Whatsapp).</pre>
+  </div>
+</main>
+
+<footer>
+  <span>&copy; 2025 TikSave | Putra</span>
+  <div class="footer-links">
+    <a href="#">FAQ</a>
+    <a href="#">Kontak</a>
+  </div>
+</footer>
+
+<div class="dl-overlay" id="dlOverlay">
+  <div class="dl-box">
+    <i class="fas fa-cloud-arrow-down"></i>
+    <h4>Mengunduh video…</h4>
+    <p id="dlText">Mempersiapkan file…</p>
+    <div class="progress-track">
+      <div class="progress-fill" id="dlFill" style="width:0%"></div>
+    </div>
+  </div>
+</div>
+
+<div class="ad-overlay" id="adOverlay">
+  <div class="ad-box">
+    <div class="ad-top">
+      <div class="ad-icon"><i class="fas fa-crown"></i></div>
+      <h3>Unlock HD</h3>
+      <p>Tonton iklan singkat untuk mendukung layanan dan download video HD.</p>
+    </div>
+
+    <div class="ad-slot-wrap" id="adSlot">
+      <div>
+        <i class="fas fa-rectangle-ad" style="font-size:20px; color:#ccc; margin-bottom:6px; display:block"></i>
+        Slot iklan Monetag
+        <code>Pasang Zone ID untuk aktifkan iklan real</code>
+      </div>
+    </div>
+
+    <div class="ad-timer">
+      <div class="ad-timer-track">
+        <div class="ad-timer-fill" id="adFill" style="width:0%"></div>
+      </div>
+      <div class="ad-timer-label" id="adLabel">Harap tunggu…</div>
+    </div>
+
+    <div class="ad-bottom">
+      <button class="btn-continue" id="btnContinue" disabled>Menunggu iklan…</button>
+      <div class="ad-fine-print">
+        <i class="fas fa-heart" style="color:#f87171"></i>
+        Iklan ini mendukung layanan tetap gratis
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
